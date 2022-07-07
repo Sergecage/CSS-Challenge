@@ -1,0 +1,49 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #6273be;
+}
+
+.main-section {
+  width: 100%;
+}
+
+.gallery {
+  --s: 300px;
+  display: -ms-grid;
+  display: grid;
+  grid: auto-flow var(--s)/repeat(2, var(--s));
+  gap: 10px;
+  place-items: center;
+  margin: calc(var(--s) / 2);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.gallery img {
+  width: 141%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  -webkit-transform: scale(var(--_t, 1)) rotate(-45deg);
+          transform: scale(var(--_t, 1)) rotate(-45deg);
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.gallery img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  --_t: 1.15;
+}

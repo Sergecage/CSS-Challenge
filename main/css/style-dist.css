@@ -1,0 +1,12 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  background: #9fc98c;
+  position: relative;
+}
